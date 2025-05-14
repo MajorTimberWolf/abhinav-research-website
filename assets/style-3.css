@@ -1,37 +1,49 @@
-:root {
-    --theme-color: #CD5C5C;
-    --theme-color-hover: #a04747;
+/* General Body and Font Styles (from friend's theme) */
+body {
+    background-color: #222; /* Dark background */
+    color: #ccc;            /* Light grey text */
+    font-family: 'Source Sans Pro', sans-serif; /* Friend's font */
+    font-size: 11pt;
+    font-weight: 300;
+    line-height: 1.75em;
+}
+
+/* General Link Styles */
+a {
+    color: #aaa; /* Default light link color */
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff; /* Brighter link color on hover */
 }
 
 .instilogo {
     height: 50px;
-    filter: grayscale(20%);
+    filter: grayscale(20%); /* This was already matching */
 }
-
-a:hover {
-    /* font-weight: 400; */
-    text-decoration: none;
-    transition-duration: 0.3s;
-    transition-timing-function: linear;
-    /* color: #444; */
-}
-
 
 .noter {
     font-size: 9pt;
+    color: #aaa; /* Slightly dimmer for notes */
 }
 
 .tagsep {
     padding: 4px;
+    color: #888; /* Color for the separator */
 }
 
+/* Tags for links like github, pdf, ppt */
 .tag {
     padding-right: 2px;
-    color: var(--theme-color);
+    color: #aaa; /* Match general link color */
 }
 
 .tag:hover {
-    color: var(--theme-color-hover);
+    color: #fff; /* Brighter on hover */
 }
 
 .confshort {
@@ -41,47 +53,101 @@ a:hover {
 .conf {
     display: inline-block;
     padding-bottom: 4px;
+    font-size: 0.9em;
+    color: #bbb;
 }
 
 .paper {
-    border-left: 1px solid #ddd;
+    /* Subtle border for paper items on dark background */
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Name Style */
 .name {
-    color: var(--theme-color);
+    font-size: 28pt;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #fff; /* White name */
 }
 
+/* Menu Links in the Left Sidebar */
 .menulink {
-    color: var(--theme-color);
+    color: #ccc; /* Light grey menu links */
+    display: block; /* Ensure they take up width for easier clicking */
+    padding: 2px 0; /* Add some padding */
 }
 
 .menulink:hover {
-    color: var(--theme-color-hover);
+    color: #fff; /* White on hover */
 }
 
+/* In-text Links (links within paragraphs) */
 .in-text {
-    color: var(--theme-color);
+    color: #fff; /* White for emphasis */
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
 }
 
 .in-text:hover {
-    color: var(--theme-color-hover);
+    color: #fff;
+    border-bottom-color: transparent; /* Remove border on hover */
 }
 
+/* Paper/Project Titles */
 .papertitle {
-    color: var(--theme-color);
+    font-weight: 600;
+    color: #fff; /* White titles */
 }
 
+/* Profile Picture Styling (Matches friend's PFP appearance) */
 .profilepic {
     width: 150px;
-    border-radius: 40%;
-    filter: grayscale(30%);
+    border-radius: 40%; /* Rounded rectangle/squircle */
+    /* filter: grayscale(30%); */ /* Grayscale removed to match friend */
 }
 
+/* Section Headers (e.g., "Projects", "Updates") */
+.header {
+    font-weight: 600;
+    color: #fff; /* White header text */
+    font-size: 18pt;
+    /* pt-5 class in HTML already handles top padding */
+    margin-bottom: 15px; /* Add some space below headers */
+}
+
+
+/* Styling for the "Updates" table */
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 0.5em 0.5em 0.5em 0; /* Adjusted padding */
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1); /* Subtle row separators */
+}
+table tr:last-child td {
+    border-bottom: none; /* No border for the last row */
+}
+
+/* Make bold text (like dates) in table cells white */
+table td b {
+    color: #fff;
+    font-weight: 600; /* Ensure it's visibly bold */
+}
+
+/* Links within the table cells */
+table td a {
+    color: #fff; /* Make links in updates white */
+    border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+}
+table td a:hover {
+    color: #fff;
+    border-bottom-color: transparent;
+}
+
+
+/* Responsive Adjustments */
 @media (min-width: 768px) {
     .fixed-posi {
-        /* width: 50%;
-            margin-left: 50%;
-            min-height:100%; */
         position: fixed;
     }
 }
@@ -97,19 +163,21 @@ a:hover {
 
     .profilepic {
         width: 90px;
-        border-radius: 40%;
+        border-radius: 20%; /* Adjusted border-radius for smaller screens */
         padding-top: 0px !important;
         padding-bottom: 0px !important;
-        filter: grayscale(30%);
+        /* filter: grayscale(30%); */ /* Grayscale removed */
     }
 
     .menur {
         padding-top: 18px !important;
     }
+    
+    .name {
+        font-size: 22pt; /* Slightly smaller name on mobile */
+    }
 
+    .header {
+        font-size: 16pt; /* Slightly smaller headers on mobile */
+    }
 }
-
-/* .thisauthor {
-          color: #111;
-          text-decoration: underline;
-    } */
