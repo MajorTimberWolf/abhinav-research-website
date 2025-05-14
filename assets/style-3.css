@@ -3,7 +3,7 @@ body {
     background-color: #1A202C; /* Dark Slate Blue */
     color: #CBD5E0;            /* Clearer Light Grey */
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: 300;
     line-height: 1.75em;
 }
@@ -74,6 +74,9 @@ a:hover {
     color: #CBD5E0; /* Main text color */
     display: block;
     padding: 2px 0;
+    font-size: 14.5pt;    /* UPDATED: Increased font size */
+    padding: 3px 0;       /* UPDATED: Slightly adjusted padding for new size */
+    line-height: 1.6;
 }
 
 .menulink:hover {
