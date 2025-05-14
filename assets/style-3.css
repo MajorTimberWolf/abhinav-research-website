@@ -1,8 +1,8 @@
-/* General Body and Font Styles (from friend's theme) */
+/* General Body and Font Styles */
 body {
-    background-color: #222; /* Dark background */
-    color: #ccc;            /* Light grey text */
-    font-family: 'Source Sans Pro', sans-serif; /* Friend's font */
+    background-color: #1A202C; /* Dark Slate Blue */
+    color: #CBD5E0;            /* Clearer Light Grey */
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 11pt;
     font-weight: 300;
     line-height: 1.75em;
@@ -10,7 +10,7 @@ body {
 
 /* General Link Styles */
 a {
-    color: #aaa; /* Default light link color */
+    color: #90CDF4; /* Pleasant Light Blue */
     text-decoration: none;
     transition-duration: 0.3s;
     transition-timing-function: linear;
@@ -18,32 +18,32 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #fff; /* Brighter link color on hover */
+    color: #63B3ED; /* Brighter Blue on hover */
 }
 
 .instilogo {
     height: 50px;
-    filter: grayscale(20%); /* This was already matching */
+    filter: grayscale(20%);
 }
 
 .noter {
     font-size: 9pt;
-    color: #aaa; /* Slightly dimmer for notes */
+    color: #A0AEC0; /* Dimmer grey for notes */
 }
 
 .tagsep {
     padding: 4px;
-    color: #888; /* Color for the separator */
+    color: #888;
 }
 
 /* Tags for links like github, pdf, ppt */
 .tag {
     padding-right: 2px;
-    color: #aaa; /* Match general link color */
+    color: #90CDF4; /* Match general link color */
 }
 
 .tag:hover {
-    color: #fff; /* Brighter on hover */
+    color: #63B3ED; /* Match general link hover color */
 }
 
 .confshort {
@@ -54,12 +54,11 @@ a:hover {
     display: inline-block;
     padding-bottom: 4px;
     font-size: 0.9em;
-    color: #bbb;
+    color: #bbb; /* Or adjust to #A0AEC0 if preferred */
 }
 
 .paper {
-    /* Subtle border for paper items on dark background */
-    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(144, 205, 244, 0.15); /* Hint of blue for border */
 }
 
 /* Name Style */
@@ -67,53 +66,50 @@ a:hover {
     font-size: 28pt;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: #fff; /* White name */
+    color: #fff; /* White name - Stays white for high contrast */
 }
 
 /* Menu Links in the Left Sidebar */
 .menulink {
-    color: #ccc; /* Light grey menu links */
-    display: block; /* Ensure they take up width for easier clicking */
-    padding: 2px 0; /* Add some padding */
+    color: #CBD5E0; /* Main text color */
+    display: block;
+    padding: 2px 0;
 }
 
 .menulink:hover {
-    color: #fff; /* White on hover */
+    color: #fff; /* White on hover - Stays white */
 }
 
 /* In-text Links (links within paragraphs) */
 .in-text {
-    color: #fff; /* White for emphasis */
+    color: #fff; /* White for emphasis - Stays white */
     border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
 }
 
 .in-text:hover {
     color: #fff;
-    border-bottom-color: transparent; /* Remove border on hover */
+    border-bottom-color: transparent;
 }
 
 /* Paper/Project Titles */
 .papertitle {
     font-weight: 600;
-    color: #fff; /* White titles */
+    color: #fff; /* White titles - Stays white */
 }
 
-/* Profile Picture Styling (Matches friend's PFP appearance) */
+/* Profile Picture Styling */
 .profilepic {
     width: 150px;
-    border-radius: 40%; /* Rounded rectangle/squircle */
-    /* filter: grayscale(30%); */ /* Grayscale removed to match friend */
+    border-radius: 40%;
 }
 
 /* Section Headers (e.g., "Projects", "Updates") */
 .header {
     font-weight: 600;
-    color: #fff; /* White header text */
+    color: #63B3ED; /* Bright, Clear Blue */
     font-size: 18pt;
-    /* pt-5 class in HTML already handles top padding */
-    margin-bottom: 15px; /* Add some space below headers */
+    margin-bottom: 15px;
 }
-
 
 /* Styling for the "Updates" table */
 table {
@@ -121,29 +117,41 @@ table {
 }
 
 table td {
-    padding: 0.5em 0.5em 0.5em 0; /* Adjusted padding */
-    border-bottom: solid 1px rgba(255, 255, 255, 0.1); /* Subtle row separators */
+    padding: 0.5em 0.5em 0.5em 0;
+    border-bottom: solid 1px rgba(144, 205, 244, 0.1); /* Subtle row separators, hint of blue */
 }
 table tr:last-child td {
-    border-bottom: none; /* No border for the last row */
+    border-bottom: none;
 }
 
 /* Make bold text (like dates) in table cells white */
 table td b {
-    color: #fff;
-    font-weight: 600; /* Ensure it's visibly bold */
+    color: #fff; /* Stays white for emphasis */
+    font-weight: 600;
 }
 
 /* Links within the table cells */
 table td a {
-    color: #fff; /* Make links in updates white */
-    border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+    color: #90CDF4; /* Consistent link color */
+    border-bottom: dotted 1px rgba(144, 205, 244, 0.5); /* Dotted underline with link color */
 }
 table td a:hover {
-    color: #fff;
+    color: #63B3ED; /* Consistent link hover color */
     border-bottom-color: transparent;
 }
 
+/* Footer Institution and Years Styling -- ADDED/ENSURED THESE ARE HERE */
+.institution {
+    font-size: 12px;
+    font-weight: 600;
+    color: #CBD5E0;   /* Matches main body text color */
+    margin-top: 4px;
+}
+
+.years {
+    font-size: 11px;
+    color: #A0AEC0;   /* Slightly dimmer, like the .noter class */
+}
 
 /* Responsive Adjustments */
 @media (min-width: 768px) {
@@ -163,21 +171,20 @@ table td a:hover {
 
     .profilepic {
         width: 90px;
-        border-radius: 20%; /* Adjusted border-radius for smaller screens */
+        border-radius: 20%;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
-        /* filter: grayscale(30%); */ /* Grayscale removed */
     }
 
     .menur {
         padding-top: 18px !important;
     }
-    
+
     .name {
-        font-size: 22pt; /* Slightly smaller name on mobile */
+        font-size: 22pt;
     }
 
     .header {
-        font-size: 16pt; /* Slightly smaller headers on mobile */
+        font-size: 16pt;
     }
 }
